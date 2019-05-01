@@ -401,6 +401,7 @@ EXTRA_DIST = \
 	test_ntpdate.py \
 	test_objcopy.py \
 	test_objdump.py \
+	test_ocrmypdf.py \
 	test_od.py \
 	test_oggdec.py \
 	test_op.py \

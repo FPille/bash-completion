@@ -280,6 +280,7 @@ bashcomp_DATA = 2to3 \
 		nsupdate \
 		ntpdate \
 		oggdec \
+		ocrmypdf \
 		op \
 		openssl \
 		opera \
