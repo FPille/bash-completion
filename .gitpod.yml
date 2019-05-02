@@ -3,4 +3,5 @@ image:
 # Command to start on workspace startup (optional)
 tasks:
   - command: pip3 install ocrmypdf
+  - command: pip3 install -r /workspace/bash-completion/test/requirements.txt
   - command: echo "source /workspace/bash-completion/completions/ocrmypdf " >> ~/.bashrc
