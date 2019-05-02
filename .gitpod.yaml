@@ -1,0 +1,5 @@
+image:
+  file: Dockerfile
+# Command to start on workspace startup (optional)
+tasks:
+  - command: pip3 install ocrmypdf
