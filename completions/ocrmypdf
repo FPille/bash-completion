@@ -15,7 +15,7 @@ _ocrmypdf()
             ;;
         --output-type)
             COMPREPLY=( $( compgen -W 'pdfa pdf pdfa-1 pdfa-2 pdfa-3' -- \
-		        "$cur" ) )
+                "$cur" ) )
             return
             ;;
         --pdf-renderer)
@@ -52,11 +52,11 @@ _ocrmypdf()
             COMPREPLY=( $( compgen -W '{1..9}' -- "$cur" ) ) # max level ?
             return
             ;;
-	    --tesseract-pagesegmode)
+        --tesseract-pagesegmode)
             COMPREPLY=( $( compgen -W '{1..13}' -- "$cur" ) )
             return
             ;;
-	    --sidecar|--title|--author|--subject|--keywords|--unpaper-args)
+        --sidecar|--title|--author|--subject|--keywords|--unpaper-args)
             # argument required but no completions available
             return
             ;;
