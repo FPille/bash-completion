@@ -15,7 +15,7 @@ _ocrmypdf()
             ;;
         --output-type)
             COMPREPLY=( $( compgen -W 'pdfa pdf pdfa-1 pdfa-2 pdfa-3' -- \
-		"$cur" ) )
+		        "$cur" ) )
             return
             ;;
         --pdf-renderer)
@@ -44,7 +44,7 @@ _ocrmypdf()
             COMPREPLY=( $( compgen -P "$cur" -W '{0..9}' ) )
             return
             ;;
-         -j|--jobs)
+        -j|--jobs)
             COMPREPLY=( $( compgen -W '{1..'$( _ncpus )'}' -- "$cur" ) )
             return
             ;;
@@ -64,9 +64,7 @@ _ocrmypdf()
 
     $split && return
 
-    if [[ $cur == -* ]]; then   # '$( _parse_help "$1" )' does not work
-       # COMPREPLY=( $( compgen -W '$( _parse_help - <<< $( "$1" --help ) )' \
-       #     --  "$cur" ) )
+    if [[ $cur == -* ]]; then
         COMPREPLY=( $( compgen -W '--language --image-dpi --output-type
             --sidecar --version --jobs --quiet --verbose --title --author
             --subject --keywords --rotate-pages --remove-background --deskew
@@ -78,13 +76,12 @@ _ocrmypdf()
             --rotate-pages-threshold --pdfa-image-compression --user-words
             --user-patterns --keep-temporary-files --flowchart --output-type' \
             --  "$cur" ) )
-
         return
     else
         _filedir
         return
     fi
-
 } &&
 complete -F _ocrmypdf ocrmypdf
 
+# ex: filetype=sh
